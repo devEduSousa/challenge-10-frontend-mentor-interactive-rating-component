@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Overpass", sans-serif;
+}
+
+body {
+    background-color: #121417;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(213, 19%, 18%);
+    max-width: 90%;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+main .circle {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(149, 158, 172, .1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+main .circle.image {
+    align-self: flex-start;
+}
+
+main img {
+    width: 15px;
+}
+
+main h1 {
+    align-self: flex-start;
+    font-size: 25px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+main p {
+    font-size: 15px;
+    line-height: 25px;
+    color: hsl(216, 12%, 54%);
+    margin-bottom: 30px;
+}
+
+main span {
+    font-size: 15px;
+    color: hsl(216, 12%, 54%);
+    font-weight: bold;
+}
+
+main .feedback {
+    display: flex;
+    gap: 15px;
+}
+
+main button {
+    width: 100%;
+    background-color: #fb7413;
+    padding: 15px 0;
+    text-transform: uppercase;
+    font-size: 15px;
+    color: #fff;
+    letter-spacing: 3px;
+    border-radius: 30px;
+}
+
+footer {
+    font-size: 11px;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    bottom: 20px;
+}
+
+footer a {
+    text-decoration: none;
+    color: rgb(251, 116, 19, .5);
+    transition: .3s;
+}
+
+@media(min-width: 500px) {
+    main {
+        width: 400px;
+    }
+
+    main .feedback {
+        gap: 25px;
+    }
+}
+
+@media(min-width: 1000px) {
+    main .feedback .circle.option {
+        cursor: pointer;
+        transition: .3s;
+    }
+
+    main .feedback .circle.option:hover {
+        background-color: #fb7413;
+    }
+
+    main .feedback .circle.option:hover > span {
+        color: #fff;
+    }
+
+    main button {
+        cursor: pointer;
+        transition: .3s;
+    }
+
+    main button:hover {
+        background-color: #fff;
+        color: #fb7413;
+    }
+
+    footer a:hover {
+        color: rgb(251, 116, 19, 1);
+    }
+}
