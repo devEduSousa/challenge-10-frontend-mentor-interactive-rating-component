@@ -28,7 +28,11 @@ main {
     padding: 20px;
 }
 
-main .circle {
+.hide {
+    display: none;
+}
+
+main .question .circle {
     width: 50px;
     height: 50px;
     background-color: rgba(149, 158, 172, .1);
@@ -39,48 +43,94 @@ main .circle {
     margin-bottom: 30px;
 }
 
-main .circle.image {
+main .question .circle.image {
     align-self: flex-start;
 }
 
-main img {
+main .question img {
     width: 15px;
 }
 
-main h1 {
+main .question h1 {
     align-self: flex-start;
     font-size: 25px;
     color: #fff;
     margin-bottom: 20px;
 }
 
-main p {
+main .question p {
     font-size: 15px;
     line-height: 25px;
     color: hsl(216, 12%, 54%);
     margin-bottom: 30px;
 }
 
-main span {
+main .question span {
     font-size: 15px;
     color: hsl(216, 12%, 54%);
     font-weight: bold;
 }
 
-main .feedback {
+main .question .feedback {
     display: flex;
-    gap: 15px;
+    margin-bottom: 30px;
 }
 
-main button {
+main .question .feedback .circle.option {
+    margin: auto;
+}
+
+main .question .feedback .circle.option:first-child {
+    margin-left: 0;
+}
+
+main .question .feedback .circle.option:last-child {
+    margin-right: 0;
+}
+
+main .question button {
     width: 100%;
     background-color: #fb7413;
+    border-color: #fb7413;
+    outline: none;
     padding: 15px 0;
     text-transform: uppercase;
     font-size: 15px;
     color: #fff;
     letter-spacing: 3px;
     border-radius: 30px;
+}
+
+main .thanks {
+    text-align: center;
+}
+
+main .thanks img {
+    margin-top: 20px;
+    width: 150px;
+}
+
+main .thanks .reply {
+    font-size: 15px;
+    color: #fb7413;
+    width: 180px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: rgba(149, 158, 172, .1);
+    border-radius: 50px;
+}
+
+main .thanks h1 {
+    color: #fff;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+main .thanks p {
+    font-size: 15px;
+    line-height: 25px;
+    color: hsl(216, 12%, 54%);
+    margin-bottom: 20px;
 }
 
 footer {
@@ -97,17 +147,17 @@ footer a {
     transition: .3s;
 }
 
-@media(min-width: 500px) {
+@media(min-width: 400px) {
     main {
-        width: 400px;
-    }
-
-    main .feedback {
-        gap: 25px;
+        width: 340px;
     }
 }
 
 @media(min-width: 1000px) {
+    main { 
+        width: 380px;
+    }
+    
     main .feedback .circle.option {
         cursor: pointer;
         transition: .3s;
@@ -128,6 +178,7 @@ footer a {
 
     main button:hover {
         background-color: #fff;
+        border-color: #fff;
         color: #fb7413;
     }
 
